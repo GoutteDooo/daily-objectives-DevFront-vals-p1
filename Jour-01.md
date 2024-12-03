@@ -19,7 +19,7 @@
   - [x] qu'est-ce que le ECMA-262
   - [x] quelle est la version actuelle du standard ECMAScript ?
 - [x] Comprendre le fonctionnement des variables en JavaScript (https://fr.javascript.info/variables)
-- [ ] Découvrir les types de données en JavaScript (https://fr.javascript.info/types)
+- [x] Découvrir les types de données en JavaScript (https://fr.javascript.info/types)
 - [ ] Comprendre _Les conversions de types_ en JavaScript (https://fr.javascript.info/type-conversions)
 - [ ] Comprendre les mécanismes des opérateurs mathématiques en JavaScript (https://fr.javascript.info/operators) :
   - [ ] concaténation
