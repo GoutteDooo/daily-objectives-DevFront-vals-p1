@@ -215,5 +215,22 @@ delete Object.prototype; // Erreur
 ## Fonctionnement des variables dans JS
 
 - Convention de nommage des constantes :
-  - En MAJUSCULE lorsque les constantes sont connues avant le chargement de la page.
+  - En MAJUSCULE lorsque les constantes sont connues avant le chargement de la page (codées en dur).
   - En camelCase lorsqu'elles sont déclarées après le chargement de la page.
+
+## Types de données dans JS
+
+- Huit types de données de base :
+
+  - Number (integers et float)
+    - Infinity, Nan sont des numbers spéciaux, mais restent des numbers tout de même.
+  - bigInt (entiers supérieurs à 2⁵³-1), se termine par un n (ex : `const bigInt = 1546451678764445468745476784149877563245640450657870n`)
+  - String
+  - Boolean
+  - null (type: aucun type) (référence à un objet non existant, ou pointeur null)
+  - undefined (type à part entière) (variable déclarée mais non affectée)
+  - symbols (symbol pour les ids uniques (primitif))
+  - Object
+
+- Tous les types sauf Object sont appelés **primitifs**.
+- L'opérateur typeof renvoie une chaine de caractères avec le nom du type
