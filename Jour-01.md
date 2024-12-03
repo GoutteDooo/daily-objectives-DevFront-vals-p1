@@ -12,7 +12,7 @@
     - [x] standard & environnement d'exécution
   - [x] ce qu'est une instruction
   - [x] ce qu'est l'insertion automatique (ou implicite) de point-virgule
-  - [ ] les commentaires
+  - [x] les commentaires
 - [ ] Découvrir l'écosystème JavaScript :
   - [ ] à quoi sert use-strict et comment l'utiliser (ES5, ES6+, etc ...)
   - [ ] qu'est-ce que le TC39
