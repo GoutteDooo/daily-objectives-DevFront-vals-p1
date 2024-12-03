@@ -15,7 +15,7 @@
   - [x] les commentaires
 - [ ] Découvrir l'écosystème JavaScript :
   - [x] à quoi sert use-strict et comment l'utiliser (ES5, ES6+, etc ...)
-  - [ ] qu'est-ce que le TC39
+  - [x] qu'est-ce que le TC39
   - [ ] qu'est-ce que le ECMA-262
   - [ ] quelle est la version actuelle du standard ECMAScript ?
 - [ ] Comprendre le fonctionnement des variables en JavaScript (https://fr.javascript.info/variables)

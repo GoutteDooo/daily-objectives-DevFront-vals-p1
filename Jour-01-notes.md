@@ -188,3 +188,14 @@ delete Object.prototype; // Erreur
 2. Meilleures performances des moteurs
 3. Sécurité renforcée (comme les mots-clés réservés)
 4. Compatibilité future (pour d'éventuelles évolutions de JS)
+
+## TC39
+
+- Technical Committee 39 est un comité de l'organisme ECMA International, responsable de la standardisation du langage JS, officiellement appelé ECMAScript.
+
+### Membres
+
+- Grandes entreprises : Google, FB, Apple, Mozilla, Microsoft....
+- Dés indés et experts
+
+### A approfondir
