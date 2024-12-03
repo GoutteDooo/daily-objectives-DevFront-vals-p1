@@ -199,3 +199,15 @@ delete Object.prototype; // Erreur
 - Dés indés et experts
 
 ### A approfondir
+
+## ECMA-262
+
+- Spécification standard qui définit le langage de script ECMAScript, donc JS est l'une des implémentations les plus connues.
+- Une spécification standard est un document technique qui décrit en détail comment quelque chose doit fonctionner.
+- ECMA-262 est donc un document écrit, pas un logiciel ou un outil.
+- Publié par ECMA International.
+- Le but est de standardiser un langage de script pour garantir une comaptibilité entre différentes implémentations (navigateurs, environnements serveur, etc...)
+- ECMAScript est la base de JS, mais aussi de langages similaires comme JScript (Microsoft) ou ActionScript (Adobe Flash)
+- Définit les fondations du langage ECMAScript.
+- Spécification technique, une description formelle des fonctionnalités d'un langage de script.
+- Pour prendre l'exemple, JS est une implémentation réelle d'ECMAScript, intégrée dans les navigateurs et les environnements comme Node.js
