@@ -14,4 +14,8 @@ function demo() {
 }
 demo();
 
+let a1 = "yo";
+
+window.alert(a1);
+
 // console.log(obj);
