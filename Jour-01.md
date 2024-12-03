@@ -7,9 +7,9 @@
 ### Première introduction au langage Javascript :
 
 - [ ] Comprendre la structure du code et la syntaxe en JavaScript :
-  - [ ] EcmaScript vs JavaScript
-    - [ ] l'importance de la ponctuation
-    - [ ] standard & environnement d'exécution
+  - [x] EcmaScript vs JavaScript
+    - [x] l'importance de la ponctuation
+    - [x] standard & environnement d'exécution
   - [ ] ce qu'est une instruction
   - [ ] ce qu'est l'insertion automatique (ou implicite) de point-virgule
   - [ ] les commentaires
