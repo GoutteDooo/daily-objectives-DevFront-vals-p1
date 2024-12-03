@@ -5,7 +5,7 @@
  * @param {number} b - Le second nombre.
  * @returns {number} La somme des deux nombres.
  */
-function add(a, b) {
+/*function add(a, b) {
   return a + b;
 }
 
@@ -14,8 +14,10 @@ function demo() {
 }
 demo();
 
-let a1 = "yo";
-
-window.alert(a1);
+let a1 = 1 / 0;
+console.log(a1);
 
 // console.log(obj);
+*/
+let ourPlanet = "Hearth"; //Nom de notre planète
+let currentUserName; //Nom du visiteur actuel
