@@ -14,7 +14,7 @@
   - [x] ce qu'est l'insertion automatique (ou implicite) de point-virgule
   - [x] les commentaires
 - [ ] Découvrir l'écosystème JavaScript :
-  - [ ] à quoi sert use-strict et comment l'utiliser (ES5, ES6+, etc ...)
+  - [x] à quoi sert use-strict et comment l'utiliser (ES5, ES6+, etc ...)
   - [ ] qu'est-ce que le TC39
   - [ ] qu'est-ce que le ECMA-262
   - [ ] quelle est la version actuelle du standard ECMAScript ?
