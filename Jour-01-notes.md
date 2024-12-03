@@ -211,3 +211,9 @@ delete Object.prototype; // Erreur
 - Définit les fondations du langage ECMAScript.
 - Spécification technique, une description formelle des fonctionnalités d'un langage de script.
 - Pour prendre l'exemple, JS est une implémentation réelle d'ECMAScript, intégrée dans les navigateurs et les environnements comme Node.js
+
+## Fonctionnement des variables dans JS
+
+- Convention de nommage des constantes :
+  - En MAJUSCULE lorsque les constantes sont connues avant le chargement de la page.
+  - En camelCase lorsqu'elles sont déclarées après le chargement de la page.
