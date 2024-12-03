@@ -99,4 +99,31 @@ function add(a, b) {
 
 - Expression produit une valeur : `let sum = 3 + 5; //'3 + 5' est une expression`
 - Instruction exécute une action : `let sum = 3 + 5; // L'instruction inclut l'expression '3 + 5'`
--
+
+## Les commentaires
+
+- JSDoc utilise des commentaires spécifiques pour documenter le code, générer des docs, ou fournir des infos aux développeurs
+
+```js
+/**
+ * Additionne deux nombres.
+ * @param {number} a - Le premier nombre.
+ * @param {number} b - Le second nombre.
+ * @returns {number} La somme des deux nombres.
+ */
+function add(a, b) {
+  return a + b;
+}
+```
+
+- Les balises comme @param et @returns permettent de décrire précisément les paramètres attendus pour une fonction, le type des données, la valeur retournée par la fonction.
+- Ca aide les autres dévs (ou moi-même plus tard) à comprendre comment utiliser la fonction, même sans lire son contenu
+
+| Balise      | Utilité                                                        |
+| ----------- | -------------------------------------------------------------- |
+| @param      | Décrit un paramètre d'une fonction, avec son type et son rôle. |
+| @returns    | Indique la valeur de retour d'une fonction.                    |
+| @example    | Fournit un exemple d'utilisation de la fonction ou méthode.    |
+| @throws     | Explique les erreurs ou exceptions qui peuvent être levées.    |
+| @deprecated | Signale qu'une fonction ou méthode est obsolète.               |
+| @author     | Documente l'auteur du code.                                    |
