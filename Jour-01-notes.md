@@ -62,3 +62,41 @@
   - Autres plateformes :
     - Deno: une alternative à node.js
     - moteurs embarqués ex dans des app mobiles comme IoT
+
+## Types d'instruction JS
+
+- D'ABORD : Une instruction (ou statement) est une unité de base d'exécution : une action à effectuer par le moteur JS. (équivalent d'une phrase complète en langage humain)
+
+### Que peut inclure une instruction ?
+
+- Des mots-clés du langage (if, for, return...)
+- Des expressions (calculs, assignations...)
+- Des opérateurs (+, =...)
+
+- Chaque instruction doit :
+  - Être complète pour que le moteur JS puisse l'exécuter
+  - Se terminer par un ";" (même si parfois ASI peut le faire automatiquement mais on va éviter)
+
+### Types d'instructions JS
+
+- assignation (`let x = 10; //affecte 10 à la variable x`)
+- déclaration :
+
+```js
+const PI = 3.14; //déclare une constante
+function add(a, b) {
+  // Déclare une fonction
+  return a + b;
+}
+```
+
+- conditionnelle (`if (x < 5) { ... }`)
+- boucles (`for, while...`)
+- interruption (`for (...) { ...; break; //Sort de la boucle alors qu'elle n'est pas forcément terminée}`)
+- retour (`return ...;`)
+
+### Expressions vs instructions
+
+- Expression produit une valeur : `let sum = 3 + 5; //'3 + 5' est une expression`
+- Instruction exécute une action : `let sum = 3 + 5; // L'instruction inclut l'expression '3 + 5'`
+-
