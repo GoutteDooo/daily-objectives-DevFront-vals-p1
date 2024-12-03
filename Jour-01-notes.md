@@ -21,7 +21,7 @@
 - JS implémente ES
 - JS utilise ES pour écrire et exécuter du code, mais ES n'est pas utilisable en solo
 - JS suit ES, et pas l'inverse.
--
+
 
 ## Importance de la ponctuation, standard & environnement d'exécution
 
@@ -41,7 +41,7 @@
 
   Ne fonctionne pas car js tente d'interpréter [1,2,3] comme une tentative d'accès.
 
-## standards et environnements d'exécution
+## Standards et Environnements d'exécution
 
 ### Standards
 
