@@ -1,3 +1,4 @@
+"use strict";
 /**
  * Additionne deux nombres.
  * @param {number} a - Le premier nombre.
@@ -8,4 +9,9 @@ function add(a, b) {
   return a + b;
 }
 
-console.log(add(5, 2));
+function demo() {
+  console.log(this); // `undefined` au lieu de l'objet global
+}
+demo();
+
+// console.log(obj);

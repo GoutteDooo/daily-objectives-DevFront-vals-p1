@@ -127,3 +127,64 @@ function add(a, b) {
 | @throws     | Explique les erreurs ou exceptions qui peuvent être levées.    |
 | @deprecated | Signale qu'une fonction ou méthode est obsolète.               |
 | @author     | Documente l'auteur du code.                                    |
+
+## Strict mode
+
+- Pour utiliser le mode strict sur js, on peut écrire :
+
+```js
+"use strict":
+let public = 10; //erreur : "public" est un mot réservé
+```
+
+- Interdit les doublons dans les noms des paramètres
+
+```js
+"use strict";
+function demo(a, a) {
+  // Erreur : paramètres en double
+  return a;
+}
+```
+
+- Objets freezés rejettent une erreur si modifiés
+
+```js
+"use strict";
+const obj = Object.freeze({ prop: 42 });
+obj.prop = 99; // Erreur en mode strict
+```
+
+- Pas d'utilisation de this global
+
+```js
+"use strict";
+function demo() {
+  console.log(this); // `undefined` au lieu de l'objet global
+}
+demo();
+```
+
+- Elimine certaines pratiques dangereuses (comme with par exemple)
+
+```js
+"use strict";
+with (obj) {
+  // Erreur en mode strict
+  console.log(prop);
+}
+```
+
+- Protection contre la suppression des propriétés non-supprimables
+
+```js
+"use strict";
+delete Object.prototype; // Erreur
+```
+
+### Avantages à utiliser le strict mode
+
+1. Détection des erreurs
+2. Meilleures performances des moteurs
+3. Sécurité renforcée (comme les mots-clés réservés)
+4. Compatibilité future (pour d'éventuelles évolutions de JS)
