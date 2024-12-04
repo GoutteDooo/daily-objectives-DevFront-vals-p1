@@ -11,7 +11,7 @@
 - [x] Comprendre les conditions en JavaScript (https://fr.javascript.info/ifelse)
   - [x] if else
   - [x] ternaire
-- [ ] Comprendre le fonctionnement des opérateurs logiques (https://fr.javascript.info/logical-operators)
+- [x] Comprendre le fonctionnement des opérateurs logiques (https://fr.javascript.info/logical-operators)
   - [x] `||` (OR)
   - [x] `&&` (AND)
   - [x] `!` (NOT)
