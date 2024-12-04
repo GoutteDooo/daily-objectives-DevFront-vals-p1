@@ -1,5 +1,5 @@
 "use strict";
-let name, admin;
-name = "true";
-admin = name;
-console.log("a" > "ab");
+
+let question = prompt("Nom officiel de JS : ");
+
+question == "ECMAScript" ? alert("OUI !") : alert("NON !");
