@@ -22,7 +22,6 @@
 - JS utilise ES pour écrire et exécuter du code, mais ES n'est pas utilisable en solo
 - JS suit ES, et pas l'inverse.
 
-
 ## Importance de la ponctuation, standard & environnement d'exécution
 
 - JS peut insérer des points-virgules automatiques (ASI - Automatic Semicolon Insertion), mais peut entraîner des comportements imprévisibles. Par exemple :
@@ -240,3 +239,59 @@ delete Object.prototype; // Erreur
 - `"6" / "2" = 3` : Les strings sont converties en nombres ici
 - `let str = "123"; log(Number(str)); // résultat : 120`
 -
+
+## Opérateurs Mathématiques
+
+### "unaire", "binaire", "opérande"
+
+- 5 \* 2 : opérange gauche = 5, opérande droit = 2 (on peut dire aussi "argument")
+- Un opérateur est **unaire** s'il a une seule opérande : `let x = 1;`
+- Un opérateur est **binaire** s'il a deux opérandes : `let x = 1, y = 2; alert(y - x); // le moins binaire soustrait des valeurs`
+
+### conversion numérique, unaire +
+
+- le plus + appliqué à une seule valeur, si l'opérande n'est pas un nombre, il est alors conveti en nombre
+  exemple :
+
+```js
+alert(+true); // 1
+alert(+""); // 0
+```
+
+- C'est comme faire Number(true), mais plus rapide.
+
+### Précédence des opérateurs
+
+| Précédence | Nom            | Symbole  |
+| ---------- | -------------- | -------- |
+| …          | …              | …        |
+| 14         | plus           | unaire + |
+| 14         | négation       | unaire - |
+| 13         | exponentiation | \*\*     |
+| 12         | multiplication | \*       |
+| 12         | division       | /        |
+| 11         | addition       | +        |
+| 11         | soustraction   | -        |
+| …          | …              | …        |
+| 2          | affectation    | =        |
+| …          | …              | …        |
+
+- exemple :
+
+```js
+let apples = "2";
+let oranges = "3";
+
+alert(+apples + +oranges); //5
+```
+
+Les "+ unaires" fonctionnent avant l'addition, ce qui permet de faire la conversion.
+
+**Les parenthèses prennent la priorité sur TOUT**.
+
+- affectations chaînées :
+
+```js
+let a, b, c;
+a = b = c = 2 + 2; // a = 4, b = 4, c = 4
+```
