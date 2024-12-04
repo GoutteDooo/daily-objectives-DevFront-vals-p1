@@ -1,3 +1,5 @@
 "use strict";
 
-alert(alert(1) || 2 || alert(3));
+let a = null;
+let b = 2;
+console.log(a ?? b); // résultat : 2
