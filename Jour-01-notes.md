@@ -234,3 +234,9 @@ delete Object.prototype; // Erreur
 
 - Tous les types sauf Object sont appelés **primitifs**.
 - L'opérateur typeof renvoie une chaine de caractères avec le nom du type
+
+## Conversion de types
+
+- `"6" / "2" = 3` : Les strings sont converties en nombres ici
+- `let str = "123"; log(Number(str)); // résultat : 120`
+-
