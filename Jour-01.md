@@ -6,7 +6,7 @@
 
 ### Première introduction au langage Javascript :
 
-- [ ] Comprendre la structure du code et la syntaxe en JavaScript :
+- [x] Comprendre la structure du code et la syntaxe en JavaScript :
   - [x] EcmaScript vs JavaScript
     - [x] l'importance de la ponctuation
     - [x] standard & environnement d'exécution
