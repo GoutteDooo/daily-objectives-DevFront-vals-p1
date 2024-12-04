@@ -1,3 +1,5 @@
 "use strict";
-
-alert(alert(1) && alert(2));
+let name, admin;
+name = "true";
+admin = name;
+console.log("a" > "ab");
