@@ -22,6 +22,7 @@ do {
 */
 
 /* EXTRAIRE DES NOMBRES PREMIERS */
+/*
 let input = prompt("Saisir jusqu'à quel nombre nous irons : ");
 let n = 1;
 label: do {
@@ -36,3 +37,18 @@ label: do {
   console.log(n, "est premier.");
   n++;
 } while (n < input);
+*/
+
+const pow = (x, n) => {
+  let result = x;
+  if (n > 0) {
+    for (let i = 1; i < n; i++) {
+      result *= x;
+    }
+  } else {
+    return 1;
+  }
+  return result;
+};
+
+console.log(pow(3, 3));

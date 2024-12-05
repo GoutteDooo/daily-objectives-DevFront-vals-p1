@@ -68,3 +68,7 @@ for (let i = ....) {...}
 
 - Pour créer une boucle infinie, on utilise généralement `while (true)`. Une telle boucle peut être stoppée avec la directive `break`.
 - Lorsque l'on écrit `for (let i = 0; i < 5 ; ++i)` par exemple, `++i` s'exécute à la fin du corps de la boucle.
+
+## Fonctions
+
+- Une fonction avec un return vide renvoie `undefined`
