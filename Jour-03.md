@@ -4,11 +4,11 @@
 
 ### Javascript :
 
-- [ ] Comprendre l'intérêt et le fonctionnement des boucles en JavaScript (https://fr.javascript.info/while-for)
-  - [ ] while
-  - [ ] do while
-  - [ ] for
-  - [ ] break / continue
+- [x] Comprendre l'intérêt et le fonctionnement des boucles en JavaScript (https://fr.javascript.info/while-for)
+  - [x] while
+  - [x] do while
+  - [x] for
+  - [x] break / continue
 - [ ] Comprendre le "switch" en JavaScript (https://fr.javascript.info/switch)
 - [ ] Comprendre le fonctionnement des fonctions en JavaScript
 
