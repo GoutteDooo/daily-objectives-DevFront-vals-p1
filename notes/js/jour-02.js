@@ -1,5 +1,3 @@
 "use strict";
 
-let a = null;
-let b = 2;
-console.log(a ?? b); // résultat : 2
+alert(alert(1) && alert(2));
