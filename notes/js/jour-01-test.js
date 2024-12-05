@@ -5,10 +5,10 @@
  * @param {number} b - Le second nombre.
  * @returns {number} La somme des deux nombres.
  */
-/*function add(a, b) {
+function add(a, b) {
   return a + b;
 }
-
+/*
 function demo() {
   console.log(this); // `undefined` au lieu de l'objet global
 }
