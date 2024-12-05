@@ -14,7 +14,7 @@
 
   - [x] Fonctions Déclarations (https://fr.javascript.info/function-basics)
   - [x] Fonctions Expressions (https://fr.javascript.info/function-expressions)
-  - [ ] Fonctions Fléchées (https://fr.javascript.info/arrow-functions-basics)
+  - [x] Fonctions Fléchées (https://fr.javascript.info/arrow-functions-basics)
 
   #### Exercices :
 

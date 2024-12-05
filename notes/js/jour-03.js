@@ -38,7 +38,7 @@ label: do {
   n++;
 } while (n < input);
 */
-
+/*
 let power = function (x, n) {
   let result = x;
   if (n > 0) {
@@ -52,3 +52,12 @@ let power = function (x, n) {
 };
 
 console.log(power(3, 3));
+*/
+
+const ask = (question, yes, no) => (confirm(question) ? yes() : no());
+
+ask(
+  "dya ?",
+  () => alert("u agreed"),
+  () => alert("naah")
+);
