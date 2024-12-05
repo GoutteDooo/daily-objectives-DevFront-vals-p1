@@ -39,7 +39,7 @@ label: do {
 } while (n < input);
 */
 
-const pow = (x, n) => {
+let power = function (x, n) {
   let result = x;
   if (n > 0) {
     for (let i = 1; i < n; i++) {
@@ -51,4 +51,4 @@ const pow = (x, n) => {
   return result;
 };
 
-console.log(pow(3, 3));
+console.log(power(3, 3));
