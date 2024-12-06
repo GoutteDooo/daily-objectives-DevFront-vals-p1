@@ -60,3 +60,12 @@ let b = {}; //b et a référencent deux objets distincts, même si leur contenu 
 ### Clonage d'objets
 
 - Si on veut cloner un objet qui a des propriétés de fonction, une implémentation comme `._cloneDeep(obj)` de la bibliothèque `lodash` est conçue pour ça.
+
+## Garbage collector
+
+- Vérifie si les objets sont bien référencés, et si ce n'est pas le cas, libère la mémoire.
+- l'algorithme de base de la récupération de place (garbage collection), s'appelle "mark-and-sweep".
+- 3 optimisations :
+  - Collecte générationnelle (deux ensemble : les "nouveaux" et les "anciens". Suivi réguliers des "nouveaux" et espacés des "anciens")
+  - Collecte incrémentielle (de nombreux petits garbages collectors au lieu d'un gros créent de petits retards au lieu d'un gros)
+  - Collecte en cas d'inactivité (lorsque processus inactif)

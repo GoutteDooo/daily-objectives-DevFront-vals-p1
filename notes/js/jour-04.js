@@ -134,3 +134,5 @@ alert(user.sizes === clone.sizes); // false, c'est un objet différent
 user.sizes.width = 60; // changer une propriété d'un endroit
 alert(clone.sizes.width); // 50, sans lien
 */
+delete tiroir.canView;
+console.log(tiroir);
