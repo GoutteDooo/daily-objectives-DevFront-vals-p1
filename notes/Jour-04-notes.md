@@ -44,3 +44,19 @@ for (let code in codes) {
 ```
 
 - Les autres propriétés **non-integer** sont toutes appelées dans l'ordre dans lequel elles ont été créées.
+
+- Une **variable** stockant un objet est une **référence** vers celui-ci :
+
+```js
+let a = {};
+let b = a; //b et a référencent le même objet.
+```
+
+```js
+let a = {};
+let b = {}; //b et a référencent deux objets distincts, même si leur contenu sont identiques.
+```
+
+### Clonage d'objets
+
+- Si on veut cloner un objet qui a des propriétés de fonction, une implémentation comme `._cloneDeep(obj)` de la bibliothèque `lodash` est conçue pour ça.
