@@ -73,7 +73,6 @@ for (let i = ....) {...}
 
 - Une fonction avec un return vide renvoie `undefined`
 - Une fonction est une **valeur** : elle peut être attribuée, copiée ou déclarée à n'importe quel endroit du code.
--
 
 ### Callbacks (fonctions de rappel)
 
