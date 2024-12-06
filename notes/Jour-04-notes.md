@@ -98,7 +98,7 @@ arr.reduce();//réduit le tableau jusqu'à un certain point (à nous de définir
 ```
 
 - Il y'a un paramètre optionnel rare dans certaines fonctions `thisArg`.
-OU, la **CHEAT SHEETS** sur Javascript.info :
+  OU, la **CHEAT SHEETS** sur Javascript.info :
 
 ```
 A cheat sheet of array methods:
@@ -161,4 +161,3 @@ Look through the cheat sheet just to be aware of them. Then solve the tasks of t
 
 Afterwards whenever you need to do something with an array, and you don’t know how – come here, look at the cheat sheet and find the right method. Examples will help you to write it correctly. Soon you’ll automatically remember the methods, without specific efforts from your side.
 ```
-
