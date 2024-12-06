@@ -9,7 +9,7 @@
   - [x] Comprendre la différence entre un objet et une variable
   - [x] Savoir itérer dans un objet
   - [x] Savoir copier un objet (cloner)
-- [ ] Comprendre les références d’objet et leur copie (https://fr.javascript.info/object-copy)
+- [x] Comprendre les références d’objet et leur copie (https://fr.javascript.info/object-copy)
 
 * [ ] Comprendre le système de `Garbage Collection` (https://fr.javascript.info/garbage-collection)
   - [ ] Comprendre son utilité, les conditions de son déclenchement, sa manipulation
