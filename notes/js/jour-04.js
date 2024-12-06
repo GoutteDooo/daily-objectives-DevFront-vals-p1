@@ -136,3 +136,81 @@ alert(clone.sizes.width); // 50, sans lien
 */
 delete tiroir.canView;
 console.log(tiroir);
+
+let objet1 = {
+  text: "toto",
+};
+
+let objet2 = objet1;
+objet1.text = "toto1";
+
+console.log(objet2.text);
+
+let objetFun = {};
+
+const fonctionFun = () => {
+  alert("0 + 0 = la tête à toto.");
+};
+/*
+objetFun.alert = fonctionFun;
+objetFun.alert();
+*/
+objetFun = {
+  text: "La tete à Zoro",
+  fonctionFun() {
+    alert("0 + 0 =");
+    alert(this.text || "... je ne sais plus");
+  },
+  textFun: () => {
+    this.text = "La tête à Toto !";
+  },
+};
+/*
+objetFun.textFun();
+console.log(objetFun);
+
+objetFun.fonctionFun();
+*/
+const alertFunc = () => {
+  alert(this);
+};
+// alertFunc();
+
+let calculator = {
+  valueA: null,
+  valueB: null,
+  read() {
+    let a = prompt("Valeur 1 : ", "2");
+    let b = prompt("Valeur 2 : ", "3");
+    this.valueA = a;
+    this.valueB = b;
+  },
+  sum() {
+    return +this.valueA + +this.valueB;
+  },
+  mul() {
+    return this.valueA * this.valueB;
+  },
+};
+/*
+calculator.read();
+console.log("somme : ", calculator.sum(), "/ produit : ", calculator.mul());
+*/
+let ladder = {
+  step: 0,
+  up() {
+    this.step++;
+    return this;
+  },
+  down() {
+    this.step--;
+    return this;
+  },
+  showStep: function () {
+    // affiche l'étape en cours
+    alert(this.step);
+    return this;
+  },
+};
+
+ladder.up().up().showStep().down().showStep();
