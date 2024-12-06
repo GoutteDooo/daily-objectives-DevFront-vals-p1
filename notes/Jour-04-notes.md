@@ -69,3 +69,9 @@ let b = {}; //b et a référencent deux objets distincts, même si leur contenu 
   - Collecte générationnelle (deux ensemble : les "nouveaux" et les "anciens". Suivi réguliers des "nouveaux" et espacés des "anciens")
   - Collecte incrémentielle (de nombreux petits garbages collectors au lieu d'un gros créent de petits retards au lieu d'un gros)
   - Collecte en cas d'inactivité (lorsque processus inactif)
+
+## Arrays
+
+- LIFO (Last In First Out) pour les stacks
+- FIFO (First In First Out) pour les files d'attente
+- Un array JS fait les deux. On appelle ça un **deque** (double-ended queue)

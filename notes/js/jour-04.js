@@ -213,4 +213,60 @@ let ladder = {
   },
 };
 
-ladder.up().up().showStep().down().showStep();
+//ladder.up().up().showStep().down().showStep();
+/*
+const arrayTest = ["a", "b", "c"];
+arrayTest[1] = "d";
+console.log(arrayTest);
+console.log("shifting : ", arrayTest.shift());
+console.log("unshifting : ", arrayTest.unshift("1", "0"));
+console.log(arrayTest);
+for (let letter of arrayTest) {
+  console.log(letter);
+}
+*/
+
+const styles = ["Jazz", "Blues"];
+styles.push("RnR");
+console.log(styles);
+console.log(styles.length);
+styles[Math.floor(styles.length / 2)] = "Classics";
+console.log(styles.shift());
+
+styles.unshift("Rap", "Reggae");
+console.log(styles);
+
+const sumInput = () => {
+  const array = [];
+  do {
+    let input = prompt("Veuillez saisir un nombre : ", 0);
+    if (input === null || input === "") break;
+    input = Number(input);
+    if (isNaN(input)) {
+      break;
+    }
+    array.push(input);
+  } while (true);
+  console.log(array, ", calcul de la somme : ");
+  let sum = 0;
+  for (let value of array) {
+    sum += value;
+  }
+  console.log("La somme est : ", sum);
+};
+/*
+const input = prompt("Veuillez saisir un nombree : ", 0);
+console.log(typeof input, input);
+*/
+//sumInput();
+
+const getMaxSubSum = (arr) => {
+  const subArrTesting = [];
+  let maxSumTesting = 0;
+  let maxSum = 0;
+  for (let i = 0; i < arr.length; i++) {
+    for (let j = 0; j <= arr.length; j++) {}
+  }
+
+  return maxSum;
+};
