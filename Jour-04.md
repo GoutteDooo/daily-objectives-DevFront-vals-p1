@@ -14,5 +14,5 @@
 * [x] Comprendre le système de `Garbage Collection` (https://fr.javascript.info/garbage-collection)
   - [x] Comprendre son utilité, les conditions de son déclenchement, sa manipulation
 * [x] Comprendre le fonctionnement des méthodes et du `this` en Javascript (https://fr.javascript.info/object-methods)
-* [ ] Comprendre le fonctionnement des tableaux en JavaScript
+* [x] Comprendre le fonctionnement des tableaux en JavaScript
 * [ ] Découvrir les méthodes de tableaux

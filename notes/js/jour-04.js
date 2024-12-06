@@ -261,12 +261,16 @@ console.log(typeof input, input);
 //sumInput();
 
 const getMaxSubSum = (arr) => {
-  const subArrTesting = [];
-  let maxSumTesting = 0;
+  let maxSumTemp = 0;
   let maxSum = 0;
-  for (let i = 0; i < arr.length; i++) {
-    for (let j = 0; j <= arr.length; j++) {}
+  for (let i = 0; i < arr.length - 1; i++) {
+    maxSumTemp = 0;
+    for (let j = i; j <= arr.length - 1; j++) {
+      maxSumTemp += arr[j];
+      maxSum = Math.max(maxSum, maxSumTemp);
+    }
   }
-
   return maxSum;
 };
+
+console.log(getMaxSubSum([-1, -2, -3, -2, -5, -3]));
