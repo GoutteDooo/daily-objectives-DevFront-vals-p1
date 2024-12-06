@@ -12,7 +12,7 @@
 - [x] Comprendre les références d’objet et leur copie (https://fr.javascript.info/object-copy)
 
 * [x] Comprendre le système de `Garbage Collection` (https://fr.javascript.info/garbage-collection)
-  - [ ] Comprendre son utilité, les conditions de son déclenchement, sa manipulation
-* [ ] Comprendre le fonctionnement des méthodes et du `this` en Javascript (https://fr.javascript.info/object-methods)
+  - [x] Comprendre son utilité, les conditions de son déclenchement, sa manipulation
+* [x] Comprendre le fonctionnement des méthodes et du `this` en Javascript (https://fr.javascript.info/object-methods)
 * [ ] Comprendre le fonctionnement des tableaux en JavaScript
 * [ ] Découvrir les méthodes de tableaux
