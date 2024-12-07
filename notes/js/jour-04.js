@@ -273,4 +273,71 @@ const getMaxSubSum = (arr) => {
   return maxSum;
 };
 
-console.log(getMaxSubSum([-1, -2, -3, -2, -5, -3]));
+// console.log(getMaxSubSum([-1, -2, -3, -2, -5, -3]));
+
+/* Arrays Methods */
+let arrayTest = ["I", "Go", "Home", 1, 12, 3];
+console.log("array de base : ", arrayTest);
+
+const removedArray = arrayTest.splice(3, 3, "then", "I'm", "OK !"); //Retourne les éléments splicés
+
+console.log("array splicé : ", arrayTest);
+console.log("Eléments removed : ", removedArray);
+
+let slicedArray = arrayTest.slice(2, 5);
+console.log("array slicé, mais son contenu reste identique");
+console.log(arrayTest);
+console.log(slicedArray);
+
+arrayTest.concat(slicedArray);
+console.log(
+  "concaténation avec le slicé et le removed : ",
+  arrayTest.concat(slicedArray, removedArray),
+  "mais ne met pas à jour arrayTest"
+);
+
+arrayTest = arrayTest.concat(slicedArray, removedArray);
+console.log(arrayTest);
+slicedArray = null;
+console.log(slicedArray, arrayTest);
+let arrayLike = {
+  0: "un",
+  1: "deux",
+  [Symbol.isConcatSpreadable]: true,
+  length: 2,
+};
+
+// console.log(arrayTest.concat(arrayLike));
+/*
+arrayTest.forEach((item, index, array) => {
+  console.log(item, index, array);
+});
+*/
+
+// console.log(
+//   "mappage : ",
+//   arrayTest.map((item) => typeof item)
+// );
+console.log(arrayTest.sort((a, b) => (a > b ? 1 : -1)));
+console.log(arrayTest);
+let names = "John, Ashley, Alberto";
+let namesArray = names.split(", ");
+console.log(namesArray);
+
+let army = {
+  minAge: 18,
+  maxAge: 27,
+  canJoin(user) {
+    return user.age >= this.minAge && user.age < this.maxAge;
+  },
+};
+
+let users = [{ age: 16 }, { age: 20 }, { age: 23 }, { age: 30 }];
+
+// find users, for who army.canJoin returns true
+let soldiers = users.filter((user) => army.canJoin(user));
+/*
+alert(soldiers.length); // 2
+alert(soldiers[0].age); // 20
+alert(soldiers[1].age); // 23
+*/
