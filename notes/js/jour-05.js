@@ -89,13 +89,19 @@ console.log(countChar("kakkerlak", "k"));
 // exo 7
 const range = (start, end, step = 1) => {
   let newArray = [];
-  for (let i = start; i < end + 1; i++) {
-    newArray.push(i);
+  if (start > end) {
+    for (let i = start; i > end - 1; i += step) {
+      newArray.push(i);
+    }
+  } else {
+    for (let i = start; i < end + 1; i += step) {
+      newArray.push(i);
+    }
   }
   return newArray;
 };
 
-console.log(range(1, 5));
+console.log(range(1, 5, 2));
 
 const sum = (array) => {
   let sum = 0;
