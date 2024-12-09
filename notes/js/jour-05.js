@@ -40,3 +40,69 @@ for (i = 0; i < 8; i++) {
 */
 
 // exo 4
+/*
+const min = (a, b) => {
+  return a > b ? b : a;
+};
+
+console.log(min(-3, -1));
+*/
+
+//exo 5
+/*
+const recursiveIsEven = (num) => {
+  if (num < 0) num = -num;
+  if (num == 0) return true;
+  else if (num == 1) return false;
+  console.log("récursivité, num : ", num);
+
+  return recursiveIsEven(num - 2);
+};
+
+console.log(recursiveIsEven(-26));
+*/
+
+//exo 6
+/*
+const countBs = (str) => {
+  let counter = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == "B") counter++;
+  }
+  return counter;
+};
+let input = "BBCbbbBBbb";
+console.log("nombre de B dans ", input, " : ", countBs(input));
+*/
+/*
+const countChar = (str, char) => {
+  let counter = 0;
+  for (let i = 0; i < str.length; i++) {
+    if (str[i] == char) counter++;
+  }
+  return counter;
+};
+
+console.log(countChar("kakkerlak", "k"));
+*/
+
+// exo 7
+const range = (start, end, step = 1) => {
+  let newArray = [];
+  for (let i = start; i < end + 1; i++) {
+    newArray.push(i);
+  }
+  return newArray;
+};
+
+console.log(range(1, 5));
+
+const sum = (array) => {
+  let sum = 0;
+  for (let i = 0; i < array.length; i++) {
+    sum += array[i];
+  }
+  return sum;
+};
+
+console.log(sum(range(1, 5)));
