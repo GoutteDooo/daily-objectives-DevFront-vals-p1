@@ -2,4 +2,4 @@
 
 ## 07/12/2024
 
-- [ ] Brief Katas JS
+- [x] Brief Katas JS
