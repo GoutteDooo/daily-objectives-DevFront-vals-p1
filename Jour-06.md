@@ -1,6 +1,6 @@
 # Objectifs journaliers
 
-## 08/12/2024
+## 10/12/2024
 
 ### Javascript :
 
