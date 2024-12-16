@@ -8,12 +8,12 @@
   - [x] Comprendre la façon dont il est construit.
   - [x] Comprendre sa structure.
   - [x] Comprendre l'auto-correction du DOM.
-- [ ] Savoir naviguer dans le DOM :
-  - [ ] documentElement
-  - [ ] childNodes
-  - [ ] firstChild
-  - [ ] lastChild
-  - [ ] siblings
+- [x] Savoir naviguer dans le DOM :
+  - [x] documentElement
+  - [x] childNodes
+  - [x] firstChild
+  - [x] lastChild
+  - [x] siblings
 - [ ] Savoir récupérer des éléments du DOM :
   - [ ] querySelector
   - [ ] getElement..
