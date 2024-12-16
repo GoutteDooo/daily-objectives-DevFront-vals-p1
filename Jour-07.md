@@ -4,4 +4,4 @@
 
 ### Javascript :
 
-- [] C'est la Katastrophe !!!
+- [x] C'est la Katastrophe !!!
