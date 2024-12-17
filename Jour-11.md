@@ -10,4 +10,4 @@
   - [x] outerHTML
   - [x] textContent
   - [x] ...
-- [ ] Connaitre les attributs et propriétés du DOM (https://javascript.info/dom-attributes-and-properties)
+- [x] Connaitre les attributs et propriétés du DOM (https://javascript.info/dom-attributes-and-properties)
