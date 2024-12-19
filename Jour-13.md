@@ -4,4 +4,4 @@
 
 ### DOM :
 
-- [ ] Brief manipulation du DOM.
+- [x] Brief manipulation du DOM.
