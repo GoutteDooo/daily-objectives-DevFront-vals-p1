@@ -64,3 +64,22 @@ dog.speak(); // Rex barks.
 ### Flexibilité
 
 - JS permet de créer et manipuler des objets à la volée, sans définition stricte préalable.
+
+# Comprendre ce qu'est l'abstraction
+
+- Concept clé de la POO.
+- Il s'agit de **cacher les détails complexes** d'une implémentation pour ne présenter aux users qu'une interface simple et claire, leur permettant de se concentrer sur ce qui est important sans être submergés par les détails.
+
+## Principes
+
+1. Simplification des détails :
+   - Isoler les caractéristiques essentielles d'un objet ou d'un système, tout en masquant les parties inutiles ou complexes.
+   - (Exemple de la voiture que l'on conduit. On a le volant, les pédales, le tableau de bord... Mais on a pas accès aux détails du moteur, à quel type de carburant est utilisé, aux transmissions... Ce qui représenterait bcp trop d'infos)
+   -
+2. Encapsulation et abstraction :
+   - L'abstraction est souvent liée à l'encapsulation, qui consiste à restreindre l'accès direct à certaines parties d'un objet. L'abstraction s'appuie sur l'encapsulation pour masquer les détails et offrir une interface simple.
+   -
+3. Interface vs implémentation :
+   - L'interface (ou API) décrit ce que fait un objet ou une classe.
+   - L'implémentation décrit comment cela est fait
+   - Avec l'abstraction, seule l'interface est exposée à l'user.
