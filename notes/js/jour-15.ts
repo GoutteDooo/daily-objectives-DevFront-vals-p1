@@ -1,5 +1,3 @@
-import { log } from "console";
-
 abstract class Personne {
   private _nom: string; // Attribut privé
   private _âge: number; // Attribut privé
@@ -32,6 +30,7 @@ class Femme extends Personne {
   }
 }
 
-const p = new Personne("Alice", 30);
+const p = new Femme("Alice", 30);
 console.log(p.nom); // Utilisation du getter
 p.nom = "Bob"; // Utilisation du setter
+console.log(p.nom); // Utilisation du getter
