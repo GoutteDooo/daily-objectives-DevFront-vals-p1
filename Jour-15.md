@@ -4,7 +4,7 @@
 
 ### POO (Programmation Orientée Objet) :
 
-- [ ] Est-ce que JS est un langage Orienté Objet ?
+- [x] Est-ce que JS est un langage Orienté Objet ?
 - [ ] Comprendre ce qu'est l'abstraction.
 - [ ] Comprendre le principe d'instance.
 - [ ] Comprendre ce qu'est une classe.
@@ -20,6 +20,6 @@
 - [ ] Comprendre le principe d'encapsulation :
   - [ ] Qu'est ce que l'encapsulation ?
   - [ ] À quoi sert l'encapsulation ?
-  - [ ] Quels sont les différents mot-clés réservés pour l'encapsulation ?
+  - [ ] Quels sont les différents mots-clés réservés pour l'encapsulation ?
   - [ ] Comprendre le principe de "scope" (portée en français)
   - [ ] Pourquoi c'est un principe fondamental de la POO.
