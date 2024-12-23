@@ -7,11 +7,11 @@
 - [x] Est-ce que JS est un langage Orienté Objet ?
 - [x] Comprendre ce qu'est l'abstraction.
 - [x] Comprendre le principe d'instance.
-- [ ] Comprendre ce qu'est une classe.
+- [x] Comprendre ce qu'est une classe.
   - [x] Quelles différences entre classes concrètes et abstraites ?
   - [x] Comprendre ce qu'est le constructeur (`constructor`)
-  - [ ] Attributs / Propriétés.
-  - [ ] Méthodes.
+  - [x] Attributs / Propriétés.
+  - [x] Méthodes.
     - [ ] Quelle différence avec les fonctions ?
     - [ ] Utilité ?
     - [ ] Getters / Setters.

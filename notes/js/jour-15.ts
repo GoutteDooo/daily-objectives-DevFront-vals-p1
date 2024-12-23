@@ -1,20 +1,26 @@
-abstract class Animal {
-  name: string;
-  age: number;
+class Personne {
+  private _nom: string; // Attribut privé
+  private _âge: number; // Attribut privé
 
-  constructor(name: string, age: number) {
-    this.name = name;
-    this.age = age; // Assignation correcte
+  constructor(nom: string, âge: number) {
+    this._nom = nom;
+    this._âge = âge;
   }
 
-  abstract parler(): void;
-}
+  // Getter pour accéder au nom
+  get nom(): string {
+    return this._nom;
+  }
 
-class Dog extends Animal {
-  parler() {
-    console.log("wouf wouf !");
+  // Setter pour modifier le nom avec validation
+  set nom(valeur: string) {
+    if (valeur.length < 3) {
+      throw new Error("Le nom doit avoir au moins 3 caractères.");
+    }
+    this._nom = valeur;
   }
 }
 
-const Eden = new Dog("Eden", 15);
-console.log(Eden.parler());
+const p = new Personne("Alice", 30);
+console.log(p.nom); // Utilisation du getter
+p.nom = "Bob"; // Utilisation du setter

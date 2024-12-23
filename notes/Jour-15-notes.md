@@ -342,3 +342,76 @@ chat.parler(); // Miaou!
 
 4. Héritage et appel de `super` :
    - Lorsqu'une classe hérite une autre, le constructor de la classe parente peut être appelé via super() pour s'assurer que les propriétés définies dans la classe parent sont également initialisées.
+
+# Différence entre les attributs et les propriétés d'une classe :
+
+## Attributs
+
+- **Définition :** Les attributs sont les données ou variables associées à une classe ou à ses instances.
+- **Nature :** Ils représentent l'état d'un objet ou de la classe (valeurs contenues)
+- **Déclaration :** Dans TS, ils souvent souvent déclarés explicitement au sein de la classe avec leur type.
+- **Accès :** Les attributs peuvent être publics, privés ou protégés.
+
+Exemple d'attribut :
+
+```ts
+class Personne {
+  nom: string; // Attribut
+  âge: number; // Attribut
+
+  constructor(nom: string, âge: number) {
+    this.nom = nom;
+    this.âge = âge;
+  }
+}
+```
+
+## Propriétés
+
+- **Définition** : Les propriétés sont une interface pour accéder ou modifier les attributs d'une classe. Elles incluent des getters ou des setters pour encapsuler l'accès aux attributs.
+- **Objectif** : Elles permettent de contrôler l'accès ou de valider les données avant qu'elles ne soient modifiées ou lues.
+- **Déclaration** : Les propriétés sont définies avec le mot-clé `get` ou `set` et une fonction associée.
+
+Exemple de propriété :
+
+```ts
+class Personne {
+  private _nom: string; // Attribut privé
+  private _âge: number; // Attribut privé
+
+  constructor(nom: string, âge: number) {
+    this._nom = nom;
+    this._âge = âge;
+  }
+
+  // Getter pour accéder au nom
+  get nom(): string {
+    return this._nom;
+  }
+
+  // Setter pour modifier le nom avec validation
+  set nom(valeur: string) {
+    if (valeur.length < 3) {
+      throw new Error("Le nom doit avoir au moins 3 caractères.");
+    }
+    this._nom = valeur;
+  }
+}
+
+const p = new Personne("Alice", 30);
+console.log(p.nom); // Utilisation du getter
+p.nom = "Bob"; // Utilisation du setter
+```
+
+## Résumé des différences :
+
+| Aspects de la classe | Attributs                           | Propriétés                                 |
+| -------------------- | ----------------------------------- | ------------------------------------------ |
+| Nature               | Variables internes de la classe     | Interface pour accéder aux attributs       |
+| Accessibilité        | Directement accessibles (si public) | Accès via des getters et des setters       |
+| Encapsulation        | Aucune, sauf si déclarés privés     | fournissent un contrôle et des validations |
+| Déclaration          | Explicite                           | Utilisation des mots-clés `get` et `set`   |
+
+# Qu'est-ce qu'une instance ?
+
+-
