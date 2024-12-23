@@ -412,6 +412,8 @@ p.nom = "Bob"; // Utilisation du setter
 | Encapsulation        | Aucune, sauf si déclarés privés     | fournissent un contrôle et des validations |
 | Déclaration          | Explicite                           | Utilisation des mots-clés `get` et `set`   |
 
-# Qu'est-ce qu'une instance ?
+# Les différentes méthodes d'une classe
+
+## Méthodes d'instance
 
 -
