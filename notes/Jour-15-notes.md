@@ -142,3 +142,203 @@ function helperFunction() {
 ## Résumé
 
 - L'abstraction est **le processus de masquer les détails complexes d'une implémentation** pour présenter aux users une interface simple et fonctionnelle, leur permettant de se concentrer sur ce qui est vraiment important.
+
+# Comprendre le principe d'Instance
+
+- En POO, une instance désigne un **objet concret** créé à partir d'une **classe**.
+
+## Qu'est-ce qu'une classe ?
+
+- C'est une définition ou un plan permettant de créer des objets. Elle décrit les propriétés (attributs) et les comportements (méthodes) communs à ces objets.
+- Exemple :
+
+```js
+class Animal {
+  constructor(name) {
+    this.name = name; // propriété
+  }
+  speak() {
+    // méthode
+    console.log(`${this.name} makes a sound.`);
+  }
+}
+```
+
+## Qu'est-ce qu'une instance ?
+
+- Un **objet particulier** créé à partir de la **classe**
+- Si une classe est le modèle, l'instance est l'objet réel et unique construit à partir de ce modèle.
+- Une instance a ses propres valeurs pour les propriétés définies dans la classe, même si elle partage les méthodes et la structure de la classe.
+
+## Création d'une instance
+
+- Une instance est créée en utilisant le mot-clé `new` (dans de nombreux langages, y compris JS, Java et C#)
+
+## Caractéristiques d'une instance :
+
+1. Propriétés uniques :
+   - Chaque instance peut avoir des valeurs différentes pour les propriétés définies dans la classe.
+
+```js
+const cat = new Animal("Whiskers");
+const dog = new Animal("Rex");
+
+console.log(cat.name); // Whiskers
+console.log(dog.name); // Rex
+```
+
+2. Comportements partagés :
+   - Toutes les instances partagent les méthodes définies dans la classe.
+
+```js
+cat.speak(); // Whiskers makes a sound.
+dog.speak(); // Rex makes a sound.
+```
+
+3. Identification comme instance :
+   - On peut vérifier si un objet est une instance d'une classe avec l'opérateur `instanceof` :
+
+```js
+console.log(dog instanceof Animal); //true
+```
+
+4. Indépendance des instances :
+   - Les modifications apportées à une instance n'affectent pas les autres instances (sauf si elles partagent des références d'objets)
+
+```js
+cat.name = "Kitty";
+console.log(cat.name); // Kitty
+console.log(dog.name); // Rex
+```
+
+## Différence entre classe et instance :
+
+| Classe                                  | Instance                                                          |
+| --------------------------------------- | ----------------------------------------------------------------- |
+| Plan ou modèle                          | Objet concret créé à partir de la classe                          |
+| Définit la structure et le comportement | Contient des valeurs spécifiques et utilise les méthodes définies |
+| Abstrait                                | Concret                                                           |
+
+# Les Classes
+
+Elles sont utilisées pour structurer le code et modéliser des concepts du monde réel ou abstrait. Elles permettent de :
+
+- Encapsuler des données et des comportements
+- Créer des objets réutilisables
+- Simplifier la maintenance et l'extensibilité du code
+
+# Différences concrètes entre Classes Classiques et Abstraites
+
+## Définition
+
+1. Classe Classique :
+
+   - C'est une **classe complète** qui peut être instanciée directement.
+
+2. Classe Abstraite :
+   - C'est une **classe incomplète**, servant de modèle pour d'autres classes et ne pouvant pas être instanciée directement.
+
+## Instanciation
+
+1. Classique :
+   - Peut être utilisée directement pour créer des objets (instances).
+     Exemple :
+
+```js
+class Animal {
+  constructor(nom) {
+    this.nom = nom;
+  }
+}
+
+const chien = new Animal("Rex");
+console.log(chien.nom); // Rex
+```
+
+2. Abstraite :
+   - Ne peut pas être instanciée directement. elle **sert de base pour d'autres classes**.
+
+```js
+abstract class Animal {
+  constructor(nom) {
+    this.nom = nom;
+  }
+}
+
+// Erreur : on ne peut pas instancier une classe abstraite
+// const animal = new Animal("Rex");
+
+class Chien extends Animal {
+  parler() {
+    console.log("Woof!");
+  }
+}
+
+const rex = new Chien("Rex");
+rex.parler(); // Woof!
+```
+
+## Objectif :
+
+1. Classique :
+
+   - Fournit une implémentation complète d'un objet
+   - Peut contenir toutes les méthodes nécessaires au fonctionnement d'un objet
+
+2. Abstraite :
+   - Fournit un modèle ou une structure que les sous-classes doivent suivre
+   - Peut inclure des méthodes abstraites (non implémentées) que les sous-classes doivent définir
+
+## Méthodes abstraites
+
+1. Classique :
+
+   - Ne contient pas de méthodes abstraites. Toutes les méthodes ont une implémentation.
+
+2. Abstraite :
+   - Peut inclure des méthodes abstraites qui n'ont pas d'implémentation et doivent être définies dans les sous-classes.
+
+Exemple de méthode abstraite :
+
+```js
+abstract class Animal {
+  constructor(nom) {
+    this.nom = nom;
+  }
+
+  // Méthode abstraite (pas d'implémentation ici)
+  parler() {
+    throw new Error("Cette méthode doit être implémentée dans une sous-classe.");
+  }
+}
+
+class Chat extends Animal {
+  parler() {
+    console.log("Miaou!");
+  }
+}
+
+const chat = new Chat("Minou");
+chat.parler(); // Miaou!
+```
+
+# Le Constructor
+
+- **Méthode spéciale** utilisée pour initialiser un objet lors de sa création. Il sert à configurer les propriétés de l'instance avec les valeurs fournies ou des valeurs par défaut.
+
+## Caractéristiques
+
+1. Appelé automatiquement
+
+   - Il est exécuté automatiquement lors de la création de l'instance d'une classe à l'aide du mot-clé `new`
+
+2. Définit les propriétés d'instance :
+
+   - Il est souvent utilisé pour initialiser les propriétés spécifiques à chaque instance de la classe.
+
+3. Un seul par classe :
+
+   - Une classe ne peut avoir qu'un seul constructor. Cependant, il est possible d'inclure des paaramètres optionnels ou des valeurs par défaut pour varier le comportement.
+
+4. Héritage et appel de `super` :
+   - Lorsqu'une classe hérite une autre, le constructor de la classe parente peut être appelé via super() pour s'assurer que les propriétés définies dans la classe parent sont également initialisées.
