@@ -51,7 +51,7 @@ dog.speak(); // Rex barks.
 
 ### Prototypage
 
-- Contrairement aux mangages strictement orientés objet comme Java, JS utilise des protos pour implémenter l'héritage, au lieu de classes au sens classique.
+- Contrairement aux langages strictement orientés objet comme Java, JS utilise des protos pour implémenter l'héritage, au lieu de classes au sens classique.
 
 ### Fonctions comme objets
 
@@ -78,8 +78,67 @@ dog.speak(); // Rex barks.
    -
 2. Encapsulation et abstraction :
    - L'abstraction est souvent liée à l'encapsulation, qui consiste à restreindre l'accès direct à certaines parties d'un objet. L'abstraction s'appuie sur l'encapsulation pour masquer les détails et offrir une interface simple.
-   -
 3. Interface vs implémentation :
-   - L'interface (ou API) décrit ce que fait un objet ou une classe.
-   - L'implémentation décrit comment cela est fait
+   - L'interface (ou API) décrit **ce que fait** un objet ou une classe.
+   - L'implémentation décrit **comment cela est fait**
    - Avec l'abstraction, seule l'interface est exposée à l'user.
+
+## Abstraction dans la POO
+
+1. Classes abstraites :
+   - C'est une classe qui **ne peut pas être instanciée directement**. Elle sert de **modèle pour d'autres classes** et définit une interface commune.
+   - Elle peut contenir des **méthodes abstraites** (définies mais non implémentées) et des **méthodes concrètes** (implémentées).
+   - Exemple en JS :
+
+```js
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+  makeSound() {
+    throw new Error("This method must be implemented by subclasses");
+  }
+}
+
+class Dog extends Animal {
+  makeSound() {
+    console.log("Bark!");
+  }
+}
+
+const dog = new Dog("Rex");
+dog.makeSound(); // Bark!
+```
+
+2. Interfaces :
+   - Définit les méthodes ou propriétés qu'une classe doit implémenter, sans fournir d'implémentation. (JS n'a pas d'interface formelle, mais utilise souvent des conventions)
+3. Modules et API :
+   - En JS, les modules permettent de cacher certains détails tout en exposant une interface publique simple.
+   - Exemple avec les modules ES6 :
+
+```js
+// module.js
+export function add(a, b) {
+  return a + b;
+}
+
+// détails internes non exposés
+function helperFunction() {
+  return "Helper";
+}
+```
+
+## Avantages de l'abstraction
+
+1. Réduction de la complexité
+   - Les users d'une classe ou d'un système n'ont pas besoin de comprendre ses détails internes.
+2. Réutilisation et modularité :
+   - Les abstractions permettent de construire des systèmes modulaires, où les composants peuvent être réutilisés ou échangés sans affecter le reste.
+3. Maintenance facilitée :
+   - En masquant les détails d'implémentation, les changements internes peuvent être effectués sans perturber le code qui utilise l'abstraction.
+4. Orientation utilisateur:
+   - L'abstraction se concentre sur ce qui est pertinent pour l'user final, ce qui améliore la lisibilité et la convivialité du code.
+
+## Résumé
+
+- L'abstraction est **le processus de masquer les détails complexes d'une implémentation** pour présenter aux users une interface simple et fonctionnelle, leur permettant de se concentrer sur ce qui est vraiment important.
