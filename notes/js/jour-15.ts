@@ -1,4 +1,6 @@
-class Personne {
+import { log } from "console";
+
+abstract class Personne {
   private _nom: string; // Attribut privé
   private _âge: number; // Attribut privé
 
@@ -18,6 +20,15 @@ class Personne {
       throw new Error("Le nom doit avoir au moins 3 caractères.");
     }
     this._nom = valeur;
+  }
+}
+
+class Femme extends Personne {
+  constructor(name: string, age: number) {
+    super(name, age);
+  }
+  parler() {
+    console.log("Bonjour, je m'appelle : ");
   }
 }
 
