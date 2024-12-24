@@ -4,7 +4,7 @@
 
 ### POO (Programmation Orientée Objet) :
 
-- [ ] Comprendre ce qu'est l'héritage :
+- [x] Comprendre ce qu'est l'héritage :
   - [x] À quoi sert l'héritage ?
   - [x] Comment écrit-on de l'héritage ?
   - [x] Dans quel cas utilise t-on l'héritage ?
