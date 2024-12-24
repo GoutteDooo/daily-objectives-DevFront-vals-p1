@@ -28,3 +28,38 @@ Aussi, les combiner avec des classes abstraites pour structurer des systèmes co
 | Héritage/Implémentation | Une classe peut implémenter plusieurs interfaces. | Une classe ne peut hériter que d'une seule classe abstraite. |
 | Nature                  | Représente un contrat ou une structure.           | Représente un concept ou un comportement partagé.            |
 | Constructeur            | Ne peut pas contenir de constructeur.             | Peut contenir un constructeur.                               |
+
+# Comprendre le principe de relations entre les objets (UML)
+
+- Les relations entre objets en UML (Unified Modeling Language) sont des liens qui décrivent les relations entre les objets et les classes.
+- Les trois principales relations sont l'association, l'aggrégation et la composition.
+
+## Qu'est ce que l'association ?
+
+- Relation simple entre deux classes ou objets.
+- Exemple de la relation entre le Professeur et l'étudiant. Un professeur peut enseigner plusieurs étudiants. Un étudiant peut être enseigné par plusieurs professeurs.
+
+## Qu'est ce que l'aggrégation ?
+
+- Relation plus forte qu'une association.
+- Indique une relation de tout à partie entre deux objets, mais chaque partie peut continuer d'exister indépendamment du tout.
+- Exemple de la Classe (de l'école) qui réunit tout les Eleves. Si la Classe disparaît, les Eleves continuent d'exister.
+
+## Qu'est ce que la composition ?
+
+- Relation très forte entre deu classes.
+- Indique une relation de tout à partie entre deux objets, mais cette fois-ci, la vie de la partie dépend du tout.
+- Si l'objet contenant (le tout) est détruit, les objets contenus (les parties) le sont également.
+- Exemple de la Maison et des Pieces. Si la Maison disparaît, les Pieces aussi disparaîtront.
+
+## Résumé des différentes relations :
+
+| Relation    | Force      | Exemple                       | Dépendance                                      | Représentation UML |
+| ----------- | ---------- | ----------------------------- | ----------------------------------------------- | ------------------ |
+| Association | Simple     | Professeur -> Étudiant        | Aucune stricte                                  | Ligne simple       |
+| Aggrégation | Forte      | Classe (de l'école) -> Eleves | Les deux parties peuvent exister indépendamment | Losange vide       |
+| Composition | Très forte | Maison -> Pieces              | Les parties dépendent du tout                   | Losange rempli     |
+
+# Comprendre ce qu'est le polymorphisme :
+
+- Le polymorphisme est la capacité d'un objet à être utilisé de différentes manières en fonction de son type.

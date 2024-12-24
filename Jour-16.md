@@ -12,10 +12,10 @@
 - [x] Comprendre ce qu'est une interface ?
   - [x] Comprendre l'interet des interfaces.
   - [x] Quelle différence avec une classe abstraite ?
-- [ ] Comprendre le principe de relations entre les objets (UML) :
-  - [ ] Qu'est ce que l'association ?
-  - [ ] Qu'est ce que l'aggrégation ?
-  - [ ] Qu'est ce que la composition ?
+- [x] Comprendre le principe de relations entre les objets (UML) :
+  - [x] Qu'est ce que l'association ?
+  - [x] Qu'est ce que l'aggrégation ?
+  - [x] Qu'est ce que la composition ?
 - [ ] Comprendre ce qu'est le polymorphisme :
   - [ ] À quoi sert le polymorphisme ?
   - [ ] Comprendre l'utilité du polymorphisme.
