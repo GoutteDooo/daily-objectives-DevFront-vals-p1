@@ -1,3 +1,4 @@
+"use strict";
 var __extends = (this && this.__extends) || (function () {
     var extendStatics = function (d, b) {
         extendStatics = Object.setPrototypeOf ||
@@ -13,39 +14,59 @@ var __extends = (this && this.__extends) || (function () {
         d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
     };
 })();
-var Personne = /** @class */ (function () {
-    function Personne(nom, âge) {
-        this._nom = nom;
-        this._âge = âge;
+Object.defineProperty(exports, "__esModule", { value: true });
+var console_1 = require("console");
+var CompteBancaire = /** @class */ (function () {
+    function CompteBancaire(solde, titulaire, courant) {
+        this.solde = solde;
+        this.titulaire = titulaire;
+        this.courant = courant;
     }
-    Object.defineProperty(Personne.prototype, "nom", {
-        // Getter pour accéder au nom
+    CompteBancaire.prototype.deposer = function (montant) {
+        this.solde += montant;
+    };
+    CompteBancaire.prototype.afficherSolde = function () {
+        console.log("Le solde de ".concat(this.titulaire, " est de ").concat(this.solde, " euros."));
+    };
+    Object.defineProperty(CompteBancaire.prototype, "obtenirSolde", {
         get: function () {
-            return this._nom;
-        },
-        // Setter pour modifier le nom avec validation
-        set: function (valeur) {
-            if (valeur.length < 3) {
-                throw new Error("Le nom doit avoir au moins 3 caractères.");
-            }
-            this._nom = valeur;
+            return this.solde;
         },
         enumerable: false,
         configurable: true
     });
-    return Personne;
+    Object.defineProperty(CompteBancaire.prototype, "ajouterSolde", {
+        set: function (montant) {
+            this.solde += montant;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return CompteBancaire;
 }());
-var Femme = /** @class */ (function (_super) {
-    __extends(Femme, _super);
-    function Femme(name, age) {
-        return _super.call(this, name, age) || this;
+var CompteEpargne = /** @class */ (function (_super) {
+    __extends(CompteEpargne, _super);
+    function CompteEpargne() {
+        return _super !== null && _super.apply(this, arguments) || this;
     }
-    Femme.prototype.parler = function () {
-        console.log("Bonjour, je m'appelle : ");
+    CompteEpargne.prototype.calculerInterets = function (taux) {
+        console.log("Calcul des intérêts pours ${this.titulaire}...");
     };
-    return Femme;
-}(Personne));
-var p = new Femme("Alice", 30);
-console.log(p.nom); // Utilisation du getter
-p.nom = "Bob"; // Utilisation du setter
-console.log(p.nom); // Utilisation du getter
+    Object.defineProperty(CompteEpargne.prototype, "obtenirCourant", {
+        get: function () {
+            return this.courant;
+        },
+        enumerable: false,
+        configurable: true
+    });
+    return CompteEpargne;
+}(CompteBancaire));
+var compte = new CompteEpargne(1000, "Alice", 500);
+compte.deposer(500);
+compte.afficherSolde();
+compte.calculerInterets(0.1);
+(0, console_1.log)(compte.obtenirCourant);
+compte.courant += 350;
+(0, console_1.log)(compte.obtenirSolde);
+compte.ajouterSolde = 500;
+(0, console_1.log)(compte.obtenirSolde);

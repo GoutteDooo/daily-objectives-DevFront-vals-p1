@@ -1,36 +1,47 @@
-abstract class Personne {
-  private _nom: string; // Attribut privé
-  private _âge: number; // Attribut privé
+import { log } from "console";
 
-  constructor(nom: string, âge: number) {
-    this._nom = nom;
-    this._âge = âge;
+class CompteBancaire {
+  private solde: number;
+  protected titulaire: string;
+  public courant: number;
+
+  constructor(solde: number, titulaire: string, courant: number) {
+    this.solde = solde;
+    this.titulaire = titulaire;
+    this.courant = courant;
   }
 
-  // Getter pour accéder au nom
-  get nom(): string {
-    return this._nom;
+  deposer(montant: number): void {
+    this.solde += montant;
   }
 
-  // Setter pour modifier le nom avec validation
-  set nom(valeur: string) {
-    if (valeur.length < 3) {
-      throw new Error("Le nom doit avoir au moins 3 caractères.");
-    }
-    this._nom = valeur;
+  afficherSolde(): void {
+    console.log(`Le solde de ${this.titulaire} est de ${this.solde} euros.`);
   }
-}
-
-class Femme extends Personne {
-  constructor(name: string, age: number) {
-    super(name, age);
+  get obtenirSolde(): number {
+    return this.solde;
   }
-  parler() {
-    console.log("Bonjour, je m'appelle : ");
+  set ajouterSolde(montant: number) {
+    this.solde += montant;
   }
 }
 
-const p = new Femme("Alice", 30);
-console.log(p.nom); // Utilisation du getter
-p.nom = "Bob"; // Utilisation du setter
-console.log(p.nom); // Utilisation du getter
+class CompteEpargne extends CompteBancaire {
+  calculerInterets(taux: number): void {
+    console.log("Calcul des intérêts pours ${this.titulaire}...");
+  }
+
+  get obtenirCourant(): number {
+    return this.courant;
+  }
+}
+
+const compte = new CompteEpargne(1000, "Alice", 500);
+compte.deposer(500);
+compte.afficherSolde();
+compte.calculerInterets(0.1);
+log(compte.obtenirCourant);
+compte.courant += 350;
+log(compte.obtenirSolde);
+compte.ajouterSolde = 500;
+log(compte.obtenirSolde);

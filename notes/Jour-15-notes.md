@@ -418,4 +418,179 @@ p.nom = "Bob"; // Utilisation du setter
 
 ## Méthodes d'instance
 
--
+- **Description :** Les méthods qui appartiennent à une instance spécifique d'une classe.
+- **Utilisation** : Elles nécessitent une instance pour être appelées.
+- **Exemple :**
+
+```ts
+class Personne {
+  nom: string;
+
+  constructor(nom: string) {
+    this.nom = nom;
+  }
+
+  saluer(): void {
+    console.log(`Bonjour, je m'appelle ${this.nom}`);
+  }
+}
+
+const p = new Personne("Alice");
+p.saluer(); // Bonjour, je m'appelle Alice
+```
+
+## Méthodes statiques
+
+- **Description :** Les méthodes statiques sont associées à la classe elle-même, et non à une instance. Elles ne peuvent pas accéder directement aux attributs d’instance ou appeler des méthodes d’instance sans référence explicite.
+- **Utilisation :** Elles sont souvent utilisées pour des utilitaires ou des fonctions qui n’ont pas besoin d’état spécifique à une instance.
+- **Exemple :**
+
+```ts
+class MathUtil {
+  static ajouter(a: number, b: number): number {
+    return a + b;
+  }
+}
+
+console.log(MathUtil.ajouter(5, 3)); // 8
+```
+
+## Méthodes abstraites
+
+- **Description :** Les méthodes abstraites sont définies dans une classe abstraite mais n’ont pas d’implémentation. Elles doivent être implémentées dans les classes dérivées.
+- **Utilisation :** Elles imposent aux sous-classes d’avoir une implémentation spécifique.
+- **Exemple :**
+
+```ts
+abstract class Animal {
+  abstract parler(): void; // Pas d'implémentation
+}
+
+class Chien extends Animal {
+  parler(): void {
+    console.log("Wouf !");
+  }
+}
+
+const chien = new Chien();
+chien.parler(); // Wouf !
+```
+
+## Méthodes privées
+
+- **Description :** Les méthodes privées ne peuvent être appelées qu’au sein de la classe où elles sont définies.
+- **Utilisation :** Elles servent à encapsuler des détails d'implémentation qui ne doivent pas être accessibles en dehors de la classe.
+- **Exemple :**
+
+```ts
+class CompteBancaire {
+  private solde: number;
+
+  constructor(solde: number) {
+    this.solde = solde;
+  }
+
+  // Méthode privée
+  private verifierFonds(montant: number): boolean {
+    return this.solde >= montant;
+  }
+
+  retirer(montant: number): void {
+    if (this.verifierFonds(montant)) {
+      this.solde -= montant;
+      console.log(`Retrait réussi. Nouveau solde : ${this.solde}`);
+    } else {
+      console.log("Fonds insuffisants.");
+    }
+  }
+}
+
+const compte = new CompteBancaire(500);
+compte.retirer(100); // Retrait réussi. Nouveau solde : 400
+// compte.verifierFonds(100); // Erreur : Méthode privée
+```
+
+## Méthodes protégées
+
+- **Description :** Les méthodes protégées peuvent être utilisées dans la classe où elles sont définies et dans les classes qui en héritent.
+- **Utilisation :** Elles sont utiles pour partager des fonctionnalités avec des sous-classes sans les exposer publiquement.
+  **Exemple :**
+
+```ts
+class Animal {
+  protected respirer(): void {
+    console.log("Respire...");
+  }
+}
+
+class Chien extends Animal {
+  aboyer(): void {
+    console.log("Wouf !");
+    this.respirer(); // Accessible car protégée
+  }
+}
+
+const chien = new Chien();
+chien.aboyer(); // Wouf ! Respire...
+// chien.respirer(); // Erreur : Méthode protégée
+```
+
+## Méthodes asynchrones
+
+- **Description :** Les méthodes qui retournent une promesse et permettent d’exécuter du code asynchrone.
+- **Utilisation :** Utile pour les opérations comme les requêtes réseau ou le traitement différé.
+- **Exemple :**
+
+```ts
+class Api {
+  async fetchData(): Promise<string> {
+    const response = await new Promise<string>((resolve) =>
+      setTimeout(() => resolve("Données reçues"), 1000)
+    );
+    return response;
+  }
+}
+
+const api = new Api();
+api.fetchData().then((data) => console.log(data)); // Données reçues
+```
+
+## Résumé des différentes méthodes :
+
+| Type de méthode | Accessible par                | Utilisation                                                |
+| --------------- | ----------------------------- | ---------------------------------------------------------- |
+| instance        | Une instance de la classe     | Pour définir les comportements spécifiques aux instances.  |
+| statique        | La classe elle-même           | Pour des fonctions utilitaires ou générales.               |
+| abstraite       | Les sous-classes              | Pour imposer une implémentation dans les classes dérivées. |
+| privée          | La classe uniquement          | Encapsuler des détails d'implémentation                    |
+| protégée        | La classe et ses sous-classes | Partager des fonctionnalités avec des sous-classes         |
+| asynchrone      | Une instance ou une classe    | Exécuter du code asynchrone                                |
+
+# Comprendre le principe d'encapsulation
+
+## Qu'est ce que l'encapsulation ?
+
+- Concept clé de la POO.
+- Il s'agit de **cacher les détails complexes** d'une implémentation pour ne présenter aux users qu'une interface simple et fonctionnelle, leur permettant de se concentrer sur ce qui est important sans être submergés par les détails.
+
+## À quoi sert l'encapsulation ?
+
+- Permettre aux utilisateurs de manipuler les données sans avoir à se soucier de leur implémentation interne.
+- Permettre aux développeurs de modifier l'implémentation sans avoir à modifier les interfaces utilisateurs.
+- Permettre aux développeurs de faire des modifications indépendantes sans avoir à modifier les interfaces utilisateurs.
+
+## Résumé des différentes encapsulations :
+
+| Type d'encapsulation | Description                                                                                                                                                                                                                                                                                                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Privée               | Les attributs et les méthodes d'une classe sont définis privément, ce qui signifie qu'ils ne peuvent être accédés que par les méthodes de la classe. Les attributs sont donc protégés et ne peuvent être modifiés que par les méthodes de la classe. Cette encapsulation permet de garantir la sécurité et la confidentialité des données.                                           |
+| Publique             | Les attributs et les méthodes d'une classe sont définis publiquement, ce qui signifie qu'ils peuvent être accédés par tous les objets de la classe ou ses sous-classes. Les attributs sont donc accessibles et modifiables par tous les objets de la classe ou ses sous-classes. Cette encapsulation permet de garantir la sécurité et la confidentialité des données.               |
+| Protégée             | Les attributs et les méthodes d'une classe sont définis protégément, ce qui signifie qu'ils ne peuvent être accédés que par les méthodes de la classe ou ses sous-classes. Les attributs sont donc protégés et ne peuvent être modifiés que par les méthodes de la classe ou ses sous-classes. Cette encapsulation permet de garantir la sécurité et la confidentialité des données. |
+
+# Le Scope
+
+| Scope     | Accessible dans la classe | Accessible dans les sous-classes | Accessible par les instances |
+| --------- | ------------------------- | -------------------------------- | ---------------------------- |
+| private   | Oui                       | Non                              | Non                          |
+| protected | Oui                       | Oui                              | Non                          |
+| public    | Oui                       | Oui                              | Oui                          |
