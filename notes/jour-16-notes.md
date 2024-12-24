@@ -63,3 +63,28 @@ Aussi, les combiner avec des classes abstraites pour structurer des systèmes co
 # Comprendre ce qu'est le polymorphisme :
 
 - Le polymorphisme est la capacité d'un objet à être utilisé de différentes manières en fonction de son type.
+- poly (plusieurs) morphisme (formes différentes)
+
+## Les différents types de polymorphisme :
+
+- Polymorphisme de sous-typage (ou d'héritage) :
+
+  - Basé sur l'héritage de classes.
+  - Permet à une classe dérivée d’être utilisée comme si elle était une classe parent, tout en exécutant des méthodes spécifiques à la classe dérivée.
+
+- ad hoc (ou surcharge) :
+
+  - Basé sur la surcharge de méthodes.
+  - Permet d'avoir des méthodes avec le meme nom mais différentes implémentations.
+
+- paramétrique (générique) :
+  - Basé sur les types génériques.
+  - Permet de définir une méthode ou une classe qui peut fonctionner avec plusieurs types, sans être spécifique à un type particulier.
+
+## Tableau des concepts
+
+| Type de polymorphisme     | Description                                                                                   | Exemple                                          |
+| ------------------------- | --------------------------------------------------------------------------------------------- | ------------------------------------------------ |
+| Sous-typage (héritage)    | Une sous-classe remplace ou étend le comportement de la classe parent.                        | Une méthode parler() sur différents animaux.     |
+| Ad hoc (surcharge)        | Une méthode a plusieurs versions selon les paramètres.                                        | Méthodes addition(a, b) pour nombres et chaînes. |
+| Paramétrique (génériques) | Les classes ou méthodes fonctionnent avec des types variés grâce à des paramètres génériques. | Une classe Boite<T> pour différents types.       |
