@@ -27,7 +27,7 @@
 ## PNPM
 
 - Performant NPM
-- Alternative a npm et yarn, con_ue pour optimiser la gestion des paquets.
+- Alternative a npm et yarn, conçue pour optimiser la gestion des paquets.
 - Très rapide, stocke les paquets en global et réalise une grande économie d'espace disque.
 - Développé en 2016 par Zoltan Kochan.
 
@@ -36,3 +36,25 @@
 - C'est un arbre de répertoires et fichiers décrites par un fichier `package.json`.
 - Cela contient tout les fichiers nécessaires à l'exécution d'un module.
 - Les modules sont des bibliothèques JS que l'on peut utiliser dans un projet.
+
+# Mettre à jour package
+
+`npm install <nom_du_paquet>@latest`
+
+# Mettre à jour tous les packages
+
+Checker maj dispos :
+
+- `ncu`
+
+Appliquer maj dans package.json :
+
+- `ncu -u`
+
+Réinstaller les dépendances avec :
+
+- `npm install`
+
+Màj tout les packages globaux :
+
+- `npm update -g`
