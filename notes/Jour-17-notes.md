@@ -30,3 +30,9 @@
 - Alternative a npm et yarn, con_ue pour optimiser la gestion des paquets.
 - Très rapide, stocke les paquets en global et réalise une grande économie d'espace disque.
 - Développé en 2016 par Zoltan Kochan.
+
+# Comprendre ce qu'est un Package Node
+
+- C'est un arbre de répertoires et fichiers décrites par un fichier `package.json`.
+- Cela contient tout les fichiers nécessaires à l'exécution d'un module.
+- Les modules sont des bibliothèques JS que l'on peut utiliser dans un projet.

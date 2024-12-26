@@ -6,9 +6,9 @@
 
 - [x] Installation de NodeJS
 - [x] Quelle est la différence entre Node et NPM
-- [ ] Découverte de "NPM", "Yarn" et "PNPM"
-  - [ ] Comprendre les différences entre les package managers et en choisir un.
-  - [ ] Comprendre ce qu'est un package Node.
+- [x] Découverte de "NPM", "Yarn" et "PNPM"
+  - [x] Comprendre les différences entre les package managers et en choisir un.
+  - [x] Comprendre ce qu'est un package Node.
   - [ ] Savoir faire les commandes de bases :
     - [ ] Initialiser un projet Node.
       - [ ] Comprendre la structure du fichier `package.json` ([voir ici](https://docs.npmjs.com/cli/v10/configuring-npm/package-json))
