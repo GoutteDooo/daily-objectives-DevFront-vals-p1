@@ -15,10 +15,10 @@
     - [x] Installer un package (local et global)
     - [x] Désinstaller un package (local et global)
     - [xgit_u] Mettre jour les packages (local et global) et le package manager
-- [ ] Découvrir les linters et formaters
-- [ ] Quelle est la différence entre un linter et un formater
-- [ ] Quels sont les principaux outils les plus répandus ?
-- [ ] Est-il préférable de l'installer en global sur la machine ou indépendémment sur chaque projet ?
-- [ ] Qu'est ce que "Nodemon" :
-  - [ ] À quoi ça sert ?
-- [ ] Créer son premier "Hello World!" avec Node.
+- [x] Découvrir les linters et formaters
+- [x] Quelle est la différence entre un linter et un formater
+- [x] Quels sont les principaux outils les plus répandus ?
+- [x] Est-il préférable de l'installer en global sur la machine ou indépendémment sur chaque projet ?
+- [x] Qu'est ce que "Nodemon" :
+  - [x] À quoi ça sert ?
+- [x] Créer son premier "Hello World!" avec Node.
