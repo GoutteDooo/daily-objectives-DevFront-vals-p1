@@ -58,3 +58,19 @@ Réinstaller les dépendances avec :
 Màj tout les packages globaux :
 
 - `npm update -g`
+
+# Différence entre un linter un formatter
+
+- **Linter** : Outil qui analyse le code source pour détecter des pbs de style ou des erreurs potentielles sans modifier le code.
+- **Formatter** : Outil qui modifie automatiquement le code pour respecter un style prédéfini ou un formatage spécifique.
+
+# Est-il préférable de l'installer en global ou indépendamment sur chaque projet ?
+
+- Sur sa machine, c'est cool, ça permet d'avoir sa propre manière de faire.
+- Le plus embêtant, c'est quand on commence à travailler en équipe.
+  Là, il vaut mieux installer sur le projet, comme ça tout le monde travaille avec le même outil, sans avoir de conflits de version.
+
+# Nodemon ?
+
+- Outil de développement pour Node.
+- Surveille les modifs dans le projet, et redémarre le serveur ou l'app lorsque ces modifs sont repérées.

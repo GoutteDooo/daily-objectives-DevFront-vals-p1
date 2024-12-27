@@ -1,7 +1,6 @@
 {
-  "watch": ["src"],
-  "ext": "ts",
-  "execMap": {
-    "ts": "node --loader ts-node/esm"
-  }
+  "watch": ["src", "config"],
+  "ext": "js,json",
+  "ignore": ["node_modules"],
+  "exec": "node notes/js/jour-17.js"
 }
