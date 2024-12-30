@@ -1,17 +1,21 @@
-const divChamber = document.createElement("div");
-divChamber.classList.add("chambre");
-const textString = document.createTextNode("Je suis dehors !");
+const divChamber = document.createElement('div');
+divChamber.classList.add('chambre');
+const textString = document.createTextNode('Je suis dehors !');
 const textNode = document.createTextNode("salut les gens, j'suis chez moi !");
 document.body.appendChild(textNode);
-maison.append(textNode);
+/*maison.append(textNode);
 maison.after(divChamber);
-divChamber.append(textString);
-divChamber.append("\n HEEE \n", "HOOO");
-divChamber.insertAdjacentHTML("afterend", "<p>Je suis VRAIMENT dehors !!");
+*/ divChamber.append(textString);
+divChamber.append('\n HEEE \n', "HOOO");
+divChamber.insertAdjacentHTML('afterend', '<p>Je suis VRAIMENT dehors !!');
 document.body.insertAdjacentElement(
-  "afterbegin",
-  document.createElement("div")
+  'afterbegin',
+  document.createElement('div'),
 );
+
+
+
+const a = 2;
 setTimeout(() => {
   document.body.firstElementChild.remove(); //removeau bout d'une seconde la div bleue créée précédemment
 }, 1000);
@@ -27,7 +31,7 @@ console.log(
   )
 );
 */
-
+/*
 const clonedChamber = maison.cloneNode(true);
 console.log(clonedChamber);
 
@@ -38,3 +42,5 @@ for (let i = 0; i < 3; i++) {
 }
 
 document.body.after(...fragmentArrayReplace);
+// console.dir(maison);
+*/
