@@ -44,12 +44,12 @@
 
 #### Approfondissement
 
-- [ ] **Comprendre les principes des tests :**
-  - [ ] **Qu'est-ce qu’un test positif ?**  
+- [x] **Comprendre les principes des tests :**
+  - [x] **Qu'est-ce qu’un test positif ?**  
          Vérifier que le code produit le résultat attendu.
-  - [ ] **Qu'est-ce qu’un test négatif ?**  
+  - [x] **Qu'est-ce qu’un test négatif ?**  
          Vérifier que le code gère correctement les erreurs ou les cas limites.
-  - [ ] **Pourquoi organiser les tests par cas d'utilisation ?**  
+  - [x] **Pourquoi organiser les tests par cas d'utilisation ?**  
          Faciliter la lisibilité et la maintenance.
 
 ---
