@@ -20,24 +20,24 @@
 
 #### Frameworks de Test
 
-- [ ] **Explorer un framework de test :**
-  - [ ] **Qu'est-ce que Jest ?**  
+- [x] **Explorer un framework de test :**
+  - [x] **Qu'est-ce que Jest ?**  
          Un framework populaire pour écrire des tests unitaires en JavaScript.
-  - [ ] **Pourquoi utiliser Jest ?**  
+  - [x] **Pourquoi utiliser Jest ?**  
          Simple à configurer, riche en fonctionnalités (matchers, mocks, coverage).
-  - [ ] **Premiers pas avec Jest :**  
+  - [x] **Premiers pas avec Jest :**  
          Installer Jest via npm et exécuter un test de base.
 
 ---
 
 #### Écriture de Tests
 
-- [ ] **Mettre en pratique :**
-  - [ ] **Écrire un test simple :**  
+- [x] **Mettre en pratique :**
+  - [x] **Écrire un test simple :**  
          Tester une fonction qui additionne deux nombres.
-  - [ ] **Utiliser les assertions de Jest :**  
+  - [x] **Utiliser les assertions de Jest :**  
          Découvrir `toBe`, `toEqual`, `toThrow` et autres matchers utiles.
-  - [ ] **Simuler des cas d’erreurs :**  
+  - [x] **Simuler des cas d’erreurs :**  
          Tester le comportement d’une fonction lorsqu'elle reçoit des entrées inattendues.
 
 ---
